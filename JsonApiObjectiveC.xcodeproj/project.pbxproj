@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1D64AD27D874D500ABD3FA /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D64AC27D874D500ABD3FA /* MyTableViewController.m */; };
+		2C1D64B327D87FFA00ABD3FA /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D64B227D87FFA00ABD3FA /* TableViewCell.m */; };
+		2C1D64B627D8875400ABD3FA /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D64B527D8875400ABD3FA /* CollectionViewCell.m */; };
+		2C1D64BA27D8940500ABD3FA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D64B927D8940500ABD3FA /* HomeViewController.m */; };
 		2C22B2FA27D5D58700775D0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C22B2F927D5D58700775D0A /* AppDelegate.m */; };
 		2C22B2FD27D5D58700775D0A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C22B2FC27D5D58700775D0A /* SceneDelegate.m */; };
 		2C22B30027D5D58700775D0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C22B2FF27D5D58700775D0A /* ViewController.m */; };
@@ -19,6 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C1D64AB27D874D500ABD3FA /* MyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		2C1D64AC27D874D500ABD3FA /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		2C1D64B127D87FFA00ABD3FA /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		2C1D64B227D87FFA00ABD3FA /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		2C1D64B427D8875400ABD3FA /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		2C1D64B527D8875400ABD3FA /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		2C1D64B827D8940500ABD3FA /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2C1D64B927D8940500ABD3FA /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		2C22B2F527D5D58700775D0A /* JsonApiObjectiveC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JsonApiObjectiveC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C22B2F827D5D58700775D0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C22B2F927D5D58700775D0A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +109,10 @@
 			children = (
 				2C22B2FE27D5D58700775D0A /* ViewController.h */,
 				2C22B2FF27D5D58700775D0A /* ViewController.m */,
+				2C1D64AB27D874D500ABD3FA /* MyTableViewController.h */,
+				2C1D64AC27D874D500ABD3FA /* MyTableViewController.m */,
+				2C1D64B827D8940500ABD3FA /* HomeViewController.h */,
+				2C1D64B927D8940500ABD3FA /* HomeViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -112,8 +128,12 @@
 		2C22B31A27D5EF7600775D0A /* JsonCell */ = {
 			isa = PBXGroup;
 			children = (
-				2C22B31527D5E94800775D0A /* JsonTVCell.m */,
 				2C22B31427D5E94800775D0A /* JsonTVCell.h */,
+				2C22B31527D5E94800775D0A /* JsonTVCell.m */,
+				2C1D64B127D87FFA00ABD3FA /* TableViewCell.h */,
+				2C1D64B227D87FFA00ABD3FA /* TableViewCell.m */,
+				2C1D64B427D8875400ABD3FA /* CollectionViewCell.h */,
+				2C1D64B527D8875400ABD3FA /* CollectionViewCell.m */,
 			);
 			path = JsonCell;
 			sourceTree = "<group>";
@@ -191,7 +211,11 @@
 				2C22B30027D5D58700775D0A /* ViewController.m in Sources */,
 				2C22B2FA27D5D58700775D0A /* AppDelegate.m in Sources */,
 				2C22B31327D5D6C800775D0A /* WebService.m in Sources */,
+				2C1D64BA27D8940500ABD3FA /* HomeViewController.m in Sources */,
+				2C1D64B627D8875400ABD3FA /* CollectionViewCell.m in Sources */,
 				2C22B31627D5E94800775D0A /* JsonTVCell.m in Sources */,
+				2C1D64AD27D874D500ABD3FA /* MyTableViewController.m in Sources */,
+				2C1D64B327D87FFA00ABD3FA /* TableViewCell.m in Sources */,
 				2C22B30B27D5D58A00775D0A /* main.m in Sources */,
 				2C22B2FD27D5D58700775D0A /* SceneDelegate.m in Sources */,
 			);
