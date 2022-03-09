@@ -24,11 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    myDatePicker=[[UIDatePicker alloc]init];
-    [_genderTextField setInputView:myDatePicker];
-    NSString *dateString = [NSString stringWithFormat:@"%@",[NSDate date]];
-    _genderTextField.text = dateString;
-    
+    NSLog(@"Hello, This is my json api code");
     [self requestdata];
 }
 @synthesize myDatePicker;
@@ -99,7 +95,14 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 235;
 }
+
 - (void)textFieldDidEndEditing:(UITextField *)textField{
+    if(textField.tag == 3 ){
+        myDatePicker=[[UIDatePicker alloc]init];
+        [_genderTextField setInputView:myDatePicker];
+        NSString *dateString = [NSString stringWithFormat:@"%@",[NSDate date]];
+        _genderTextField.text = dateString;
+    }
     
 }
 -(void) downloadImageFromURL :(NSString *)imageUrl{
