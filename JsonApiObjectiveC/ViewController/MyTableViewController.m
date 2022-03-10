@@ -16,7 +16,7 @@
 @end
 
 @implementation MyTableViewController
-@synthesize userName,userEmail,userImages,userGender,userMobile,userCollImages;
+@synthesize userName,userEmail,userImages,userGender,userMobile,userCollImages,datePicker,genderTextfield,usernameTextField,dateTextField;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -31,6 +31,27 @@
     userCollImages = [[NSMutableArray alloc]initWithObjects:@"User1",@"User2",@"User1",@"User2",@"User1", nil];
     userGender = [[NSMutableArray alloc]initWithObjects:@"Femail",@"Male",@"Female",@"Female",@"Male", nil];
     userMobile = [[NSMutableArray alloc]initWithObjects:@"9856325698",@"858756256",@"9856325985",@"7856941236",@"8569741236", nil];
+    datePicker=[[UIDatePicker alloc]init];
+   [ dateTextField setInputView:datePicker];
+    
+    UIToolbar *toolBar=[[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 55)];
+    [toolBar setTintColor:[UIColor blackColor]];
+    UIBarButtonItem *doneBtn=[[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(ShowSelectedDate)];
+     
+    UIBarButtonItem *space=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    [toolBar setItems:[NSArray arrayWithObjects:space,doneBtn, nil]];
+
+    [dateTextField setInputAccessoryView:toolBar];
+
+}
+-(void)ShowSelectedDate{
+    dateTextField.delegate = self;
+    NSDateFormatter *objDateFormatter = [[NSDateFormatter alloc] init];
+    objDateFormatter.dateFormat = @"yyyy-MM-dd 'at' HH:mm";
+    NSDate *date = [NSDate date]; // your NSDate object
+    NSString *dateString = [objDateFormatter stringFromDate:date];
+    dateTextField.text = dateString;
+
 }
 
 //MARK: - UITableViewDataSource and UITableViewDelegate
@@ -122,4 +143,19 @@
     [alert addAction:No];
     [self presentViewController:alert animated:YES completion:nil];
 }
+- (IBAction)submitbtnClicked:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //Now write your next view controller and write your storyboard id.
+    UIViewController *myNewVC = (HomeViewController *)[storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    [self.navigationController pushViewController:myNewVC animated:YES];
+    NSLog(@"UserName is %@",usernameTextField.text);
+    NSLog(@"Date is %@",dateTextField.text);
+    NSLog(@"Gender is %@",genderTextfield.text);
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
 @end
